@@ -221,7 +221,7 @@ export default function ToolboxPage() {
 
                 {/* Sample Output */}
                 <div className="mb-4 p-4 rounded-2xl bg-teal-50/50 border border-teal-100 text-xs sm:text-sm text-teal-950">
-                  <span className="font-bold block text-teal-900 mb-1">خروجی نمونه واقعی:</span>
+                  <span className="font-bold block text-teal-900 mb-1">نمونهٔ خروجیِ فرضی (صرفاً جهت نمایش):</span>
                   <div className="whitespace-pre-wrap text-teal-900/90 leading-relaxed">
                     {guide.sampleOutput}
                   </div>

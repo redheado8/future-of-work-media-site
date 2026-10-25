@@ -19,7 +19,7 @@ export function Footer() {
               </div>
               <div>
                 <span className="font-extrabold text-xl text-white block">
-                  فردای کار | WorkTomorrow
+                  فردای کار
                 </span>
                 <span className="text-xs text-teal-400 font-medium">
                   ایده‌های تازه برای دنیای در حال تغییر کار
@@ -38,7 +38,7 @@ export function Footer() {
             <div className="inline-flex items-center gap-2 p-3 rounded-xl bg-slate-900/90 border border-slate-800 text-xs text-slate-400">
               <ShieldCheck className="w-4 h-4 text-teal-400 shrink-0" />
               <span>
-                این رسانه یک پروژه مفهومی و نمونه‌کار تخصصی تولید محتوا، استراتژی رسانه‌ای و تجربه کاربری وب است.
+                رسانه‌ای مستقل برای بررسی تحولات فناوری، منابع انسانی و آیندهٔ کار.
               </span>
             </div>
           </div>
@@ -155,7 +155,7 @@ export function Footer() {
 
         {/* Bottom copyright line */}
         <div className="mt-12 pt-6 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} فردای کار (WorkTomorrow) — تمامی حقوق محتوا برای نمونه‌کار محفوظ است.</p>
+          <p>© {new Date().getFullYear()} فردای کار — محتوای این رسانه با هدف اطلاع‌رسانی و تحلیل منتشر می‌شود.</p>
           <div className="flex items-center gap-4 text-xs">
             <span>طراحی شده با دقت و رویکرد محتوامحور</span>
             <span>•</span>

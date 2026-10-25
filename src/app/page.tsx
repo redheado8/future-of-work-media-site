@@ -278,7 +278,7 @@ export default async function HomePage() {
             <div className="lg:col-span-8 space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold border border-teal-500/30">
                 <Wrench className="w-3.5 h-3.5" />
-                <span>جعبه‌ابزار دنیای کار</span>
+                <span>جعبه‌ابزار فردای کار</span>
               </div>
 
               <h2 className="text-xl sm:text-3xl font-black text-white leading-snug">

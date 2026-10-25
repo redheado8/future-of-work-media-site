@@ -756,7 +756,8 @@ export const TOPICS = [
   }
 ];
 
-// Trend labels are qualitative, not measured percentage forecasts. They summarize the World Economic Forum Future of Jobs Report 2023 (survey expectations for 2023–2027): https://www.weforum.org/publications/the-future-of-jobs-report-2023/in-full/4-skills-outlook/\nexport const SKILLS_RADAR_DATA = [
+// Trend labels are qualitative, not measured percentage forecasts. They summarize the World Economic Forum Future of Jobs Report 2023 (survey expectations for 2023–2027): https://www.weforum.org/publications/the-future-of-jobs-report-2023/in-full/4-skills-outlook/
+export const SKILLS_RADAR_DATA = [
   {
     skill: "تفکر تحلیلی و نقادانه",
     category: "شناختی",

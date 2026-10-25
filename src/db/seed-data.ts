@@ -755,37 +755,38 @@ export const TOPICS = [
   }
 ];
 
-// Trend labels are qualitative, not measured percentage forecasts. They summarize the World Economic Forum Future of Jobs Report 2025 (employer expectations for 2025–2030): https://www.weforum.org/publications/the-future-of-jobs-report-2025/3-skills-outlook/
+// The importance scores below are editorial illustrative values, not measured survey results or WEF scores. Trend labels summarize the WEF Future of Jobs Report 2025.
+
 export const SKILLS_RADAR_DATA = [
   {
     skill: "تفکر تحلیلی و نقادانه",
     category: "شناختی",
-    growth: "از مهارت‌های موردتأکید کارفرمایان؛ گزارش ۲۰۲۵",
-    importance: 0,
+    growth: "امتیاز نموداری تحریریه؛ رتبه‌بندی عددی در گزارش منبع منتشر نشده",
+    importance: 96,
     trend: "اهمیت رو به افزایش",
     desc: "توانایی سنجش شواهد، کشف خطاهای منطقی و ارزیابی عینی خروجی مدل‌های هوش مصنوعی."
   },
   {
     skill: "سواد هوش مصنوعی و پرامپت‌نویسی",
     category: "فناوری",
-    growth: "سواد فناوری و هوش مصنوعی از مهارت‌های رو به رشد؛ گزارش ۲۰۲۵",
-    importance: 0,
+    growth: "امتیاز نموداری تحریریه؛ روند کلی با گزارش ۲۰۲۵ همسو، اما عدد امتیاز منبع پژوهشی ندارد",
+    importance: 92,
     trend: "اهمیت رو به افزایش",
     desc: "مهارت تعامل مؤثر با ابزارهای مولد و بررسی خروجی آن‌ها؛ نیازهای دقیق هر شغل متفاوت است."
   },
   {
     skill: "انعطاف‌پذیری و تاب‌آوری",
     category: "فردی",
-    growth: "از مهارت‌های رو به رشد؛ گزارش ۲۰۲۵",
-    importance: 0,
+    growth: "امتیاز نموداری تحریریه؛ روند کلی با گزارش ۲۰۲۵ همسو، اما عدد امتیاز منبع پژوهشی ندارد",
+    importance: 89,
     trend: "اهمیت رو به افزایش",
     desc: "سازگاری با تغییرات فرایندها و مدیریت موقعیت‌های نامطمئن."
   },
   {
     skill: "همدلی و هوش هیجانی سازمانی",
     category: "بین‌فردی",
-    growth: "مهارت انسانی مهم؛ بدون امتیاز عددی مقایسه‌پذیر",
-    importance: 0,
+    growth: "امتیاز نموداری تحریریه؛ عدد مقایسه‌پذیر از گزارش منبع در دست نیست",
+    importance: 88,
     trend: "اهمیت وابسته به نقش",
     desc: "درک دیدگاه دیگران، همکاری و مدیریت موقعیت‌های بین‌فردی."
   },
@@ -793,15 +794,15 @@ export const SKILLS_RADAR_DATA = [
     skill: "کنجکاوی و یادگیری مداوم",
     category: "شناختی",
     growth: "از مهارت‌های رو به رشد؛ گزارش ۲۰۲۵",
-    importance: 0,
+    importance: 91,
     trend: "اهمیت رو به افزایش",
     desc: "آمادگی برای یادگیری و به‌روزرسانی مهارت‌ها متناسب با نیازهای شغلی."
   },
   {
     skill: "ورود داده و پردازش متنی روتین",
     category: "عملیاتی",
-    growth: "برخی وظایف روتین در معرض تغییر ناشی از فناوری‌اند",
-    importance: 0,
+    growth: "امتیاز نموداری تحریریه؛ عدد مقایسه‌پذیر از گزارش منبع در دست نیست",
+    importance: 30,
     trend: "اثر وابسته به وظیفه و صنعت",
     desc: "تایپ دستی و استخراج سادهٔ متن ممکن است در برخی فرایندها خودکار یا با ابزارها پشتیبانی شود؛ این به معنای حذف کامل همهٔ این وظایف نیست."
   }

@@ -22,10 +22,10 @@ interface PollOption {
 export function SkillsDataSection() {
   const [activeTab, setActiveTab] = useState<"growing" | "declining" | "model">("growing");
   const [pollData, setPollData] = useState<PollOption[]>([
-    { optionKey: "ai-recruitment", label: "هوش مصنوعی و جذب استعداد", votes: 142 },
-    { optionKey: "continuous-upskilling", label: "ارتقای مستمر مهارت‌ها و بازآموزی", votes: 218 },
-    { optionKey: "employee-wellbeing", label: "تجربه و سلامت روانی کارکنان", votes: 176 },
-    { optionKey: "remote-hybrid-culture", label: "فرهنگ تیم‌های ترکیبی و دورکاری", votes: 98 },
+    { optionKey: "ai-recruitment", label: "هوش مصنوعی و جذب استعداد", votes: 0 },
+    { optionKey: "continuous-upskilling", label: "ارتقای مستمر مهارت‌ها و بازآموزی", votes: 0 },
+    { optionKey: "employee-wellbeing", label: "تجربه و سلامت روانی کارکنان", votes: 0 },
+    { optionKey: "remote-hybrid-culture", label: "فرهنگ تیم‌های ترکیبی و دورکاری", votes: 0 },
   ]);
   const [hasVoted, setHasVoted] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -280,7 +280,7 @@ export function SkillsDataSection() {
               کدام حوزه بیشترین اولویت تحول را در سازمان شما دارد؟
             </h3>
             <p className="text-xs text-slate-300 mb-5 leading-relaxed">
-              با انتخاب گزینه مدنظر، دیدگاه خود را با صدها متخصص دیگر مقایسه کنید.
+              رأی شما به نتایج واقعی همین نظرسنجی اضافه می‌شود؛ نتایج تا این لحظه بر اساس رأی‌های ثبت‌شده نمایش داده می‌شوند.
             </p>
 
             <div className="space-y-3 mb-5">
@@ -334,7 +334,7 @@ export function SkillsDataSection() {
             </div>
 
             <div className="pt-3 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-400">
-              <span>مجموع آراء ثبت‌شده: {totalVotes.toLocaleString("fa-IR")} رأی</span>
+              <span>{totalVotes > 0 ? `مجموع آراء ثبت‌شده: ${totalVotes.toLocaleString("fa-IR")} رأی` : "هنوز رأیی ثبت نشده است"}</span>
               {hasVoted && <span className="text-teal-400 font-medium">رأی شما ثبت شد ✓</span>}
             </div>
           </div>

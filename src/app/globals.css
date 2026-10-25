@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
+/* This publication uses a fixed light editorial palette. Do not let OS/browser dark mode recolor text utilities. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --font-vazirmatn: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --color-brand-navy: #0B132B;
@@ -10,6 +13,7 @@
 }
 
 html {
+  color-scheme: light;
   font-family: var(--font-vazirmatn);
   direction: rtl;
   scroll-behavior: smooth;
@@ -19,6 +23,7 @@ html {
 
 body {
   font-family: var(--font-vazirmatn);
+  color: #0F172A;
   background-color: #F8FAFC;
   color: #0F172A;
   min-height: 100vh;

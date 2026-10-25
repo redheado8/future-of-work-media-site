@@ -8,7 +8,7 @@ import { getAllArticles } from "@/lib/articles";
 export const metadata: Metadata = {
   title: {
     default: "فردای کار | ایده‌های تازه برای دنیای در حال تغییر کار",
-    template: "%s | فردای کار (WorkTomorrow)",
+    template: "%s | فردای کار",
   },
   description:
     "رسانه تخصصی آینده کار، مدیریت سرمایه انسانی، هوش مصنوعی، یادگیری سازمانی و تحول دیجیتال سازمان‌ها.",
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     "یادگیری سازمانی",
     "تجربه کارکنان",
     "تحول دیجیتال",
-    "WorkTomorrow",
+    "فردای کار",
     "پیپل آنالیتیکس",
   ],
-  authors: [{ name: "فردای کار (WorkTomorrow)" }],
+  authors: [{ name: "فردای کار" }],
   openGraph: {
     title: "فردای کار | ایده‌های تازه برای دنیای در حال تغییر کار",
     description: "رسانه مستقل تخصصی درباره فناوری‌های نوین در محیط کار و مدیریت سرمایه انسانی",
-    siteName: "فردای کار (WorkTomorrow)",
+    siteName: "فردای کار",
     locale: "fa_IR",
     type: "website",
   },

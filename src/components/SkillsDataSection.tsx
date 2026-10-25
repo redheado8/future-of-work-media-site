@@ -265,7 +265,7 @@ export function SkillsDataSection() {
             )}
 
             <div className="mt-6 pt-4 border-t border-slate-700/60 flex items-center justify-between text-[11px] text-slate-400">
-              <span>مأخذ: Future of Jobs Report • World Economic Forum</span>
+              <span>منبع: گزارش آیندهٔ مشاغل • مجمع جهانی اقتصاد</span>
               <span className="text-slate-500">تحلیل ترکیبی ۲۰۲۴-۲۰۲۶</span>
             </div>
           </div>

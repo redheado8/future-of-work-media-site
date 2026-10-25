@@ -3,9 +3,7 @@ import { Pool } from "pg";
 
 const databaseUrl = process.env.DATABASE_URL;
 
-if (!databaseUrl) {
-  throw new Error("DATABASE_URL is required");
-}
+// Database is optional during build; article pages fall back to bundled seed content when unavailable.
 
 const CREATE_TABLES_SQL = `
   create table if not exists articles (
@@ -56,9 +54,9 @@ const globalForDb = globalThis as typeof globalThis & {
 };
 
 function createPool(): Pool {
-  const newPool = new Pool({
-    connectionString: databaseUrl,
-  });
+  const newPool = databaseUrl
+    ? new Pool({ connectionString: databaseUrl })
+    : new Pool();
 
   // Make sure the tables exist. The statement is queued on the new
   // connection before any real query, so it always runs first.

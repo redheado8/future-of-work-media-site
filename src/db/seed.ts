@@ -33,8 +33,8 @@ export async function seedDatabase() {
         keyTakeaways: JSON.stringify(item.keyTakeaways),
         tableOfContents: JSON.stringify(item.tableOfContents),
         references: JSON.stringify(item.references),
-        viewsCount: 150 + Math.floor(Math.random() * 200),
-        likesCount: 20 + Math.floor(Math.random() * 40),
+        viewsCount: 0,
+        likesCount: 0,
       });
       console.log(`Inserted article: ${item.slug}`);
     } else {
@@ -63,17 +63,7 @@ export async function seedDatabase() {
     }
   }
 
-  // Seed poll votes if empty
-  const existingPolls = await db.select().from(pollVotes).limit(1);
-  if (existingPolls.length === 0) {
-    await db.insert(pollVotes).values([
-      { pollKey: "workplace-transformation", optionKey: "ai-recruitment", votes: 142 },
-      { pollKey: "workplace-transformation", optionKey: "continuous-upskilling", votes: 218 },
-      { pollKey: "workplace-transformation", optionKey: "employee-wellbeing", votes: 176 },
-      { pollKey: "workplace-transformation", optionKey: "remote-hybrid-culture", votes: 98 },
-    ]);
-    console.log("Seeded initial poll votes");
-  }
+  // Poll options start at zero; only visitor submissions should create votes.
 
   console.log("Database seeding completed.");
 }

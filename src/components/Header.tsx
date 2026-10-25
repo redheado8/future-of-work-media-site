@@ -74,7 +74,7 @@ export function Header({ articlesForSearch = [] }: HeaderProps) {
             <Link
               href="/"
               className="flex items-center gap-3 group focus:outline-none"
-              title="فردای کار - WorkTomorrow"
+              title="فردای کار"
             >
               <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-500 via-cyan-500 to-emerald-400 p-[2px] shadow-lg shadow-teal-500/20 group-hover:scale-105 transition-transform duration-200">
                 <div className="w-full h-full bg-[#0B132B] rounded-[10px] flex items-center justify-center">
@@ -89,7 +89,7 @@ export function Header({ articlesForSearch = [] }: HeaderProps) {
                     فردای کار
                   </span>
                   <span className="hidden sm:inline-block text-[10px] font-mono tracking-wider px-1.5 py-0.5 rounded bg-teal-500/10 text-teal-300 border border-teal-500/20">
-                    WorkTomorrow
+                    فردای کار
                   </span>
                 </div>
                 <span className="text-[11px] text-slate-400 hidden md:block">

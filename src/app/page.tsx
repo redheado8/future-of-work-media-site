@@ -115,7 +115,7 @@ export default async function HomePage() {
                 <div className="relative rounded-3xl overflow-hidden border border-slate-700 shadow-2xl shadow-teal-950/50 aspect-[4/3] sm:aspect-[16/11]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/images/hero-future-work.jpg"
+                    src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600"
                     alt="ارتباط انسان، فناوری و آینده کار"
                     className="w-full h-full object-cover"
                   />

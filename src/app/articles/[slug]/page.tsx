@@ -19,7 +19,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${article.title} | فردای کار (WorkTomorrow)`,
+    title: `${article.title} | فردای کار`,
     description: article.summary,
     openGraph: {
       title: article.title,

@@ -114,7 +114,7 @@ export function ArticleView({ article, relatedArticles }: ArticleViewProps) {
                   <User className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900">محتوای نمونه</h4>
+                  <h4 className="text-sm font-bold text-slate-900">مقالهٔ تحلیلی</h4>
                   <p className="text-xs text-slate-500">تحریریهٔ فردای کار</p>
                 </div>
               </div>

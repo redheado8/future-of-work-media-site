@@ -149,7 +149,7 @@ export function ArticleView({ article, relatedArticles }: ArticleViewProps) {
             <div className="relative rounded-3xl overflow-hidden shadow-lg border border-slate-200 aspect-[16/9] max-h-[500px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={article.coverImage}
+                src={`/api/image?url=${encodeURIComponent(article.coverImage)}`}
                 alt={article.title}
                 className="w-full h-full object-cover"
               />

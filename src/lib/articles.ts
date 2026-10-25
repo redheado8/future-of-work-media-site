@@ -278,15 +278,6 @@ export async function getPollData(pollKey: string = "workplace-transformation") 
       .from(pollVotes)
       .where(eq(pollVotes.pollKey, pollKey));
 
-    if (rows.length === 0) {
-      return [
-        { optionKey: "ai-recruitment", label: "هوش مصنوعی و جذب استعداد", votes: 142 },
-        { optionKey: "continuous-upskilling", label: "ارتقای مستمر مهارت‌ها و بازآموزی", votes: 218 },
-        { optionKey: "employee-wellbeing", label: "تجربه و سلامت روانی کارکنان", votes: 176 },
-        { optionKey: "remote-hybrid-culture", label: "فرهنگ تیم‌های ترکیبی و دورکاری", votes: 98 },
-      ];
-    }
-
     const labels: Record<string, string> = {
       "ai-recruitment": "هوش مصنوعی و جذب استعداد",
       "continuous-upskilling": "ارتقای مستمر مهارت‌ها و بازآموزی",
@@ -294,10 +285,11 @@ export async function getPollData(pollKey: string = "workplace-transformation") 
       "remote-hybrid-culture": "فرهنگ تیم‌های ترکیبی و دورکاری",
     };
 
-    return rows.map((r) => ({
-      optionKey: r.optionKey,
-      label: labels[r.optionKey] || r.optionKey,
-      votes: r.votes,
+    const counts = new Map(rows.map((row) => [row.optionKey, row.votes]));
+    return Object.entries(labels).map(([optionKey, label]) => ({
+      optionKey,
+      label,
+      votes: counts.get(optionKey) ?? 0,
     }));
   } catch (err) {
     console.error("Poll data error:", err);
@@ -307,10 +299,20 @@ export async function getPollData(pollKey: string = "workplace-transformation") 
 
 export async function recordPollVote(pollKey: string, optionKey: string) {
   try {
-    await db
-      .update(pollVotes)
-      .set({ votes: sql`${pollVotes.votes} + 1` })
-      .where(and(eq(pollVotes.pollKey, pollKey), eq(pollVotes.optionKey, optionKey)));
+    const existing = await db
+      .select({ id: pollVotes.id })
+      .from(pollVotes)
+      .where(and(eq(pollVotes.pollKey, pollKey), eq(pollVotes.optionKey, optionKey)))
+      .limit(1);
+
+    if (existing.length > 0) {
+      await db
+        .update(pollVotes)
+        .set({ votes: sql`${pollVotes.votes} + 1` })
+        .where(and(eq(pollVotes.pollKey, pollKey), eq(pollVotes.optionKey, optionKey)));
+    } else {
+      await db.insert(pollVotes).values({ pollKey, optionKey, votes: 1 });
+    }
     return { success: true };
   } catch (err) {
     console.error("Record poll vote error:", err);

@@ -17,7 +17,7 @@ export async function generateMetadata({
   if (!topic) return { title: "موضوع یافت نشد | فردای کار" };
 
   return {
-    title: `${topic.title} | فردای کار (WorkTomorrow)`,
+    title: `${topic.title} | فردای کار`,
     description: topic.description,
   };
 }

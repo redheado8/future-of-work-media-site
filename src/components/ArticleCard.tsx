@@ -45,6 +45,13 @@ export function ArticleCard({ article, featured = false }: ArticleCardProps) {
             alt={article.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
+            onError={(event) => {
+              const image = event.currentTarget;
+              if (!image.dataset.fallbackApplied) {
+                image.dataset.fallbackApplied = "true";
+                image.src = "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600";
+              }
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
         </Link>

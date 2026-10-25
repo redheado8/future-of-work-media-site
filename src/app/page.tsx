@@ -246,7 +246,7 @@ export default async function HomePage() {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold mb-2">
                 <BookOpen className="w-3.5 h-3.5 text-teal-600" />
-                <span>بروزرسانی هفتگی</span>
+                <span>محتوای تخصصی دربارهٔ آیندهٔ کار و سرمایهٔ انسانی</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
                 تازه‌ترین مقالات و یادداشت‌های تحلیلی

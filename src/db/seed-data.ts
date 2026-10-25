@@ -218,7 +218,6 @@ export const SEED_ARTICLES: ArticleData[] = [
     ],
     references: [
       { title: "The Future of Jobs Report 2025", source: "World Economic Forum", url: "https://www.weforum.org/publications/the-future-of-jobs-report-2025/" },
-      { title: "The Future of Jobs Report 2025", source: "World Economic Forum", url: "https://www.weforum.org/publications/the-future-of-jobs-report-2025/" },
       { title: "Learning and Development", source: "Chartered Institute of Personnel and Development (CIPD)", url: "https://www.cipd.org/en/knowledge/factsheets/learning-development-factsheet/" }
     ],
     content: `

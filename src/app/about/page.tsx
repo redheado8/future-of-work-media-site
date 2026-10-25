@@ -15,8 +15,8 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "درباره رسانه و شناسنامه پروژه | فردای کار (WorkTomorrow)",
-  description: "شناسنامه، بیانیه تحریریه و رویکرد طراحی رسانه تخصصی آینده کار و منابع انسانی",
+  title: "دربارهٔ فردای کار | فردای کار",
+  description: "معرفی رویکرد تحریریه، اصول بررسی منابع و موضوعات رسانهٔ فردای کار",
 };
 
 export default function AboutPage() {
@@ -79,8 +79,7 @@ export default function AboutPage() {
             <span>شناسنامه پروژه و اهداف طراحی</span>
           </div>
           <p className="text-xs sm:text-sm text-teal-950/90 leading-relaxed mb-4">
-            این وب‌سایت یک <strong>پروژه مفهومی مستقل و نمونه‌کار تخصصی</strong> در حوزه‌های استراتژی محتوای
-            دیجیتال، معماری اطلاعات، طراحی تجربه کاربری (UX) و کاربرد هوش مصنوعی مولد در رسانه‌های تخصصی است.
+            فردای کار رسانه‌ای تخصصی برای بررسی تحولات فناوری، منابع انسانی و آیندهٔ کار است؛ با تمرکز بر تحلیل کاربردی، منابع قابل‌بررسی و رویکردی انسان‌محور.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-teal-900 pt-2 border-t border-teal-200/60">
             <div>

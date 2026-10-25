@@ -52,7 +52,7 @@ export function ShareButtons({ title, slug }: ShareButtonsProps) {
   };
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-wrap items-center gap-2">
       <span className="text-xs text-slate-500 font-medium ml-1">اشتراک:</span>
 
       <button

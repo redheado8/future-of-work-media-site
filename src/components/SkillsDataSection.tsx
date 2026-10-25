@@ -30,6 +30,7 @@ export function SkillsDataSection() {
   const [hasVoted, setHasVoted] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [voteError, setVoteError] = useState<string | null>(null);
 
   useEffect(() => {
     // Check local storage for poll vote status
@@ -55,6 +56,7 @@ export function SkillsDataSection() {
   const handleVote = async (optionKey: string) => {
     if (hasVoted || isSubmitting) return;
     setIsSubmitting(true);
+    setVoteError(null);
     setSelectedOption(optionKey);
 
     try {
@@ -64,20 +66,24 @@ export function SkillsDataSection() {
         body: JSON.stringify({ pollKey: "workplace-transformation", optionKey }),
       });
       const result = await res.json();
-      if (result.ok && result.data) {
-        setPollData(result.data);
-      } else {
-        // optimistic update
-        setPollData((prev) =>
-          prev.map((opt) =>
-            opt.optionKey === optionKey ? { ...opt, votes: opt.votes + 1 } : opt
-          )
-        );
+      if (!res.ok || !result.ok || !Array.isArray(result.data)) {
+        throw new Error(result.message || "ثبت رأی انجام نشد. لطفاً دوباره تلاش کنید.");
       }
+
+      setPollData(result.data);
       setHasVoted(true);
-      localStorage.setItem("wt_voted_poll_transformation", optionKey);
-    } catch {
-      setHasVoted(true);
+      try {
+        localStorage.setItem("wt_voted_poll_transformation", optionKey);
+      } catch {
+        // The vote is already saved on the server; local storage is only a convenience.
+      }
+    } catch (error) {
+      setSelectedOption(null);
+      setVoteError(
+        error instanceof Error
+          ? error.message
+          : "ثبت رأی با مشکل روبه‌رو شد. لطفاً دوباره تلاش کنید."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -293,7 +299,7 @@ export function SkillsDataSection() {
                   <button
                     key={opt.optionKey}
                     onClick={() => handleVote(opt.optionKey)}
-                    disabled={hasVoted}
+                    disabled={hasVoted || isSubmitting}
                     className={`w-full text-right p-3.5 rounded-xl border transition-all duration-200 relative overflow-hidden group ${
                       isSelected
                         ? "border-teal-400 bg-teal-500/20"
@@ -333,6 +339,14 @@ export function SkillsDataSection() {
               })}
             </div>
 
+            {voteError && (
+              <p role="alert" className="mb-3 text-xs text-rose-300 leading-relaxed">
+                {voteError}
+              </p>
+            )}
+            {isSubmitting && (
+              <p role="status" className="mb-3 text-xs text-slate-300">در حال ثبت رأی…</p>
+            )}
             <div className="pt-3 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-400">
               <span>{totalVotes > 0 ? `مجموع آراء ثبت‌شده: ${totalVotes.toLocaleString("fa-IR")} رأی` : "هنوز رأیی ثبت نشده است"}</span>
               {hasVoted && <span className="text-teal-400 font-medium">رأی شما ثبت شد ✓</span>}

@@ -120,7 +120,7 @@ export function ArticleView({ article, relatedArticles }: ArticleViewProps) {
               </div>
 
               {/* Utility Tools */}
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 {/* Font Size Adjuster */}
                 <TextSizeAdjuster size={textSize} onChangeSize={setTextSize} />
 

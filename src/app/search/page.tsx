@@ -6,7 +6,7 @@ import { Search, Compass } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "جست‌وجو و آرشیو مقالات | فردای کار (WorkTomorrow)",
+  title: "جست‌وجو و آرشیو مقالات | فردای کار",
   description: "کاوش در تمام مقالات، تحلیل‌ها و راهنماهای رسانه فردای کار",
 };
 

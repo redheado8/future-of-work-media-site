@@ -96,7 +96,7 @@ export function ArticleCard({ article, featured = false }: ArticleCardProps) {
           <div className="flex items-center gap-3 text-xs text-slate-500 mb-2.5">
             <span className="flex items-center gap-1">
               <Calendar className="w-3.5 h-3.5 text-slate-400" />
-              {article.publishedAt}
+              محتوای نمونه
             </span>
             <span>•</span>
             <span className="flex items-center gap-1 font-medium text-slate-600">
@@ -131,8 +131,8 @@ export function ArticleCard({ article, featured = false }: ArticleCardProps) {
               <User className="w-3.5 h-3.5" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xs font-semibold text-slate-800">{article.authorName}</span>
-              <span className="text-[10px] text-slate-400">{article.authorRole}</span>
+              <span className="text-xs font-semibold text-slate-800">محتوای نمونه</span>
+              <span className="text-[10px] text-slate-400">برای نمایش قابلیت‌های سایت</span>
             </div>
           </div>
 

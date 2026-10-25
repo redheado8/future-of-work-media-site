@@ -6,11 +6,12 @@ import { SEED_ARTICLES } from "@/db/seed-data";
 // Fallback auto-seed in case database is refreshed
 export async function ensureArticlesSeeded() {
   try {
-    const existing = await db.select({ id: articles.id }).from(articles).limit(1);
-    if (existing.length === 0) {
-      console.log("No articles found, auto-seeding...");
-      for (const item of SEED_ARTICLES) {
-        await db.insert(articles).values({
+    // Keep seed-managed article content in sync by slug, while preserving user engagement counters.
+    // This updates article metadata/content/references on deploy without resetting views or likes.
+    for (const item of SEED_ARTICLES) {
+      await db
+        .insert(articles)
+        .values({
           slug: item.slug,
           title: item.title,
           subtitle: item.subtitle,
@@ -30,11 +31,31 @@ export async function ensureArticlesSeeded() {
           references: JSON.stringify(item.references),
           viewsCount: 0,
           likesCount: 0,
+        })
+        .onConflictDoUpdate({
+          target: articles.slug,
+          set: {
+            title: item.title,
+            subtitle: item.subtitle,
+            summary: item.summary,
+            category: item.category,
+            categoryLabel: item.categoryLabel,
+            readTime: item.readTime,
+            authorName: item.authorName,
+            authorRole: item.authorRole,
+            coverImage: item.coverImage,
+            isFeatured: item.isFeatured,
+            publishedAt: item.publishedAt,
+            tags: JSON.stringify(item.tags),
+            content: item.content,
+            keyTakeaways: JSON.stringify(item.keyTakeaways),
+            tableOfContents: JSON.stringify(item.tableOfContents),
+            references: JSON.stringify(item.references),
+          },
         });
-      }
     }
   } catch (err) {
-    console.error("Auto-seed error:", err);
+    console.error("Article seed sync error:", err);
   }
 }
 

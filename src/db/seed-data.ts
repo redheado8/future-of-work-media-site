@@ -52,8 +52,9 @@ export const SEED_ARTICLES: ArticleData[] = [
     references: [
       { title: "Regulation (EU) 2024/1689 — Artificial Intelligence Act", source: "European Parliament and Council", url: "https://eur-lex.europa.eu/eli/reg/2024/1689/oj" },
       { title: "Assessing Adverse Impact in Software, Algorithms, and Artificial Intelligence Used in Employment Selection Procedures", source: "U.S. Equal Employment Opportunity Commission", url: "https://www.eeoc.gov/laws/guidance/select-issues-assessing-adverse-impact-software-algorithms-and-artificial-intelligence" },
-      { title: "Employers’ Use of AI Tools Can Result in Discrimination", source: "U.S. Equal Employment Opportunity Commission", url: "https://www.eeoc.gov/newsroom/us-eeoc-and-us-department-justice-warn-against-disability-discrimination" },
-      { title: "Business leaders risk sleepwalking towards AI misuse", source: "Reuters", url: "https://www.reuters.com/sustainability/society-equity/comment-business-leaders-risk-sleepwalking-towards-ai-misuse-2024-11-19/" }
+      { title: "Employment Tests and Selection Procedures", source: "U.S. Equal Employment Opportunity Commission", url: "https://www.eeoc.gov/laws/guidance/employment-tests-and-selection-procedures" },
+      { title: "AI and algorithmic discrimination in employment", source: "U.S. Equal Employment Opportunity Commission", url: "https://www.eeoc.gov/meetings/meeting-january-31-2023-navigating-employment-discrimination-ai-and-automated-systems-new/tippins-phd" },
+      { title: "Amazon scraps secret AI recruiting tool that showed bias against women", source: "Reuters", url: "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G/" }
     ],
     content: `
       <section id="introduction">
@@ -127,7 +128,7 @@ export const SEED_ARTICLES: ArticleData[] = [
     tags: ["تجربه کارکنان", "فرهنگ سازمانی", "تعامل کاری", "رفاه روانی", "مدیریت سرمایه انسانی"],
     keyTakeaways: [
       "تجربه کارکنان (EX) تنها مربوط به هدایای ورود یا دکوراسیون نیست، بلکه مجموع حس کارمند در تمام نقاط تماس روزمره با سازمان است.",
-      "فرایند ورود سازمانی (Onboarding) ساختاریافته می‌تواند ماندگاری نیرو را تا ۸۲ درصد در سه ماه اول ارتقا دهد.",
+      "فرایند ورود سازمانی (Onboarding) ساختاریافته می‌تواند به شفافیت انتظارات، آشنایی با نقش و تجربه بهتر کارکنان کمک کند؛ اندازه اثر آن به کیفیت اجرا و شرایط سازمان بستگی دارد.",
       "گوش‌سپاری مداوم (Continuous Listening) و نبض‌سنجی فصلی جایگزین نظرسنجی‌های سالانه حجیم و بی‌اثر شده است.",
       "سازگاری میان محیط دیجیتال و فیزیکی، مانع فرسودگی شغلی در سازمان‌های ترکیبی است."
     ],
@@ -140,9 +141,9 @@ export const SEED_ARTICLES: ArticleData[] = [
       { id: "ex-roadmap", text: "چارچوب ۴ مرحله‌ای برای آغاز طراحی تجربه کارکنان", level: 2 }
     ],
     references: [
-      { title: "Employee Experience by Design", source: "Gallup Workplace Insights" },
-      { title: "The Employee Experience Index", source: "IBM Kenexa & Workhuman" },
-      { title: "Redesigning the Post-Pandemic Workplace", source: "MIT Sloan Management Review" }
+      { title: "State of the Global Workplace", source: "Gallup", url: "https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" },
+      { title: "The Employee Experience Index", source: "IBM Smarter Workforce Institute", url: "https://www.ibm.com/thought-leadership/institute-business-value" },
+      { title: "The Future of Work", source: "MIT Sloan Management Review", url: "https://sloanreview.mit.edu/topic/future-of-work/" }
     ],
     content: `
       <section id="what-is-ex">
@@ -216,9 +217,9 @@ export const SEED_ARTICLES: ArticleData[] = [
       { id: "metrics-that-matter", text: "سنجش اثر یادگیری: فراتر از ساعت آموزشی", level: 2 }
     ],
     references: [
-      { title: "Future of Jobs Report 2024", source: "World Economic Forum" },
-      { title: "The Half-Life of Facts and Skills", source: "Nature & EdTech Review" },
-      { title: "Building a Culture of Continuous Learning", source: "Center for Creative Leadership" }
+      { title: "The Future of Jobs Report 2025", source: "World Economic Forum", url: "https://www.weforum.org/publications/the-future-of-jobs-report-2025/" },
+      { title: "The Future of Jobs Report 2025", source: "World Economic Forum", url: "https://www.weforum.org/publications/the-future-of-jobs-report-2025/" },
+      { title: "Learning and Development", source: "Chartered Institute of Personnel and Development (CIPD)", url: "https://www.cipd.org/en/knowledge/factsheets/learning-development-factsheet/" }
     ],
     content: `
       <section id="half-life-of-skills">
@@ -281,9 +282,9 @@ export const SEED_ARTICLES: ArticleData[] = [
       { id: "future-skills-chart", text: "نقشه پنج مهارت برتر دهه آینده", level: 2 }
     ],
     references: [
-      { title: "The Future of Jobs 2025-2030", source: "World Economic Forum" },
-      { title: "Human + Machine: Reimagining Work in the Age of AI", source: "Paul Daugherty, HBR Press" },
-      { title: "Emotional Intelligence as a Core Leadership Competency", source: "Daniel Goleman Research" }
+      { title: "The Future of Jobs Report 2025", source: "World Economic Forum", url: "https://www.weforum.org/publications/the-future-of-jobs-report-2025/" },
+      { title: "Generative AI at Work", source: "National Bureau of Economic Research", url: "https://www.nber.org/papers/w31161" },
+      { title: "Emotional Intelligence", source: "American Psychological Association", url: "https://www.apa.org/topics/emotions" }
     ],
     content: `
       <section id="ai-paradox">
@@ -334,9 +335,9 @@ export const SEED_ARTICLES: ArticleData[] = [
       { id: "pitfalls-and-ethics", text: "دام‌های آماری و حفاظت از حریم شخصی کارکنان", level: 2 }
     ],
     references: [
-      { title: "Investing in People: Financial Impact of Human Resource Initiatives", source: "Cascio & Boudreau" },
-      { title: "People Analytics: Transforming HR Strategy", source: "MIT Sloan" },
-      { title: "Ethical Guidelines for People Data Analytics", source: "Chartered Institute of Personnel and Development (CIPD)" }
+      { title: "People Analytics", source: "Chartered Institute of Personnel and Development (CIPD)", url: "https://www.cipd.org/en/knowledge/factsheets/analytics-factsheet/" },
+      { title: "People Analytics", source: "Chartered Institute of Personnel and Development (CIPD)", url: "https://www.cipd.org/en/knowledge/factsheets/analytics-factsheet/" },
+      { title: "People Analytics", source: "Chartered Institute of Personnel and Development (CIPD)", url: "https://www.cipd.org/en/knowledge/factsheets/analytics-factsheet/" }
     ],
     content: `
       <section id="what-is-people-analytics">
@@ -394,8 +395,8 @@ export const SEED_ARTICLES: ArticleData[] = [
       { id: "app-5", text: "۵. تولید سوالات مصاحبه سفارشی بر اساس پیشینه کاندیدا", level: 2 }
     ],
     references: [
-      { title: "Artificial Intelligence in Talent Acquisition Benchmarks", source: "SHRM Research" },
-      { title: "Modern Hiring Playbook", source: "Workable & Greenhouse Insights" }
+      { title: "AI in HR", source: "Society for Human Resource Management (SHRM)", url: "https://www.shrm.org/topics-tools/topics/technology/artificial-intelligence" },
+      { title: "AI in Recruiting", source: "Greenhouse", url: "https://www.greenhouse.com/resources" }
     ],
     content: `
       <section id="app-1">
@@ -451,8 +452,8 @@ export const SEED_ARTICLES: ArticleData[] = [
       { id: "governance", text: "حکمرانی و نظارت بر روبات‌های نرم‌افزاری", level: 2 }
     ],
     references: [
-      { title: "Automation with a Human Touch", source: "MIT Technology Review" },
-      { title: "Managing Change in the Era of Hyperautomation", source: "McKinsey Digital" }
+      { title: "The Future of Work", source: "MIT Technology Review", url: "https://www.technologyreview.com/topic/work/" },
+      { title: "The economic potential of generative AI: The next productivity frontier", source: "McKinsey & Company", url: "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" }
     ],
     content: `
       <section id="automation-landscape">
@@ -503,8 +504,8 @@ export const SEED_ARTICLES: ArticleData[] = [
       { id: "humility-and-curiosity", text: "فروتنی فکری و کنجکاوی مستمر رهبران", level: 2 }
     ],
     references: [
-      { title: "Teaming: How Organizations Learn, Innovate, and Compete", source: "Amy Edmondson, Harvard" },
-      { title: "Leadership in the Age of Agility", source: "McKinsey Quarterly" }
+      { title: "Psychological Safety and Learning Behavior in Work Teams", source: "Administrative Science Quarterly", url: "https://doi.org/10.2307/2666999" },
+      { title: "The Future of Work", source: "McKinsey & Company", url: "https://www.mckinsey.com/featured-insights/future-of-work" }
     ],
     content: `
       <section id="leadership-shift">

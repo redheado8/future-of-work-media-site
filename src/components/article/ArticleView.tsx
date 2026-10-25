@@ -92,7 +92,7 @@ export function ArticleView({ article, relatedArticles }: ArticleViewProps) {
               <span className="text-slate-300">•</span>
               <span className="text-xs text-slate-500 flex items-center gap-1">
                 <Calendar className="w-3.5 h-3.5 text-slate-400" />
-                محتوای نمونه
+                مقالهٔ تحلیلی
               </span>
             </div>
 
@@ -115,7 +115,7 @@ export function ArticleView({ article, relatedArticles }: ArticleViewProps) {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-900">محتوای نمونه</h4>
-                  <p className="text-xs text-slate-500">برای نمایش قابلیت‌های سایت</p>
+                  <p className="text-xs text-slate-500">تحریریهٔ فردای کار</p>
                 </div>
               </div>
 
@@ -149,7 +149,7 @@ export function ArticleView({ article, relatedArticles }: ArticleViewProps) {
             <div className="relative rounded-3xl overflow-hidden shadow-lg border border-slate-200 aspect-[16/9] max-h-[500px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`/api/image?url=${encodeURIComponent(article.coverImage)}`}
+                src={`/api/image?url=${encodeURIComponent(article.slug === "ai-transforming-recruitment" ? "https://images.pexels.com/photos/5668863/pexels-photo-5668863.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600" : article.coverImage)}`}
                 alt={article.title}
                 className="w-full h-full object-cover"
                 onError={(event) => {

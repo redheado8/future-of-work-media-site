@@ -101,7 +101,7 @@ export function ArticleCard({ article, featured = false }: ArticleCardProps) {
             <span>•</span>
             <span className="flex items-center gap-1 font-medium text-slate-600">
               <Clock className="w-3.5 h-3.5 text-teal-600" />
-              {article.readTime} دقیقه مطالعه
+              {article.readTime.toLocaleString("fa-IR")} دقیقه مطالعه
             </span>
           </div>
 

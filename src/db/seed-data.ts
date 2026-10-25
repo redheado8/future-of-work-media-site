@@ -92,11 +92,11 @@ export const SEED_ARTICLES: ArticleData[] = [
 
       <section id="privacy-ethics">
         <h2>حریم خصوصی متقاضیان و الزامات قانونی آینده</h2>
-        <p>در اسناد قانونی نوین نظیر مصوبه هوش مصنوعی اتحادیه اروپا (EU AI Act)، سیستم‌های غربالگری و تحلیل شغلی در طبقه «پرریسک» (High Risk) قرار گرفته‌اند. این بدان معناست که سازمان‌ها موظف‌اند:</p>
+        <p>قانون هوش مصنوعی اتحادیه اروپا، بسیاری از سامانه‌های هوش مصنوعی مورد استفاده در استخدام و مدیریت کارکنان را در گروه پرریسک قرار می‌دهد؛ اما تعهدات دقیق به نوع سامانه، نقش سازمان و زمان‌بندی اجرای مواد مربوط بستگی دارد. بنابراین نباید این فهرست را به‌عنوان الزام یکسان و لازم‌الاجرای همهٔ شرکت‌ها در همهٔ کشورها تلقی کرد.</p>
         <ul>
-          <li>متقاضی را از دخالت هوش مصنوعی در ارزیابی مطلع سازند.</li>
-          <li>امکان بازنگری انسانی و تجدیدنظر را فراهم کنند.</li>
-          <li>گزارش‌های دوره‌ای از نرخ قبولی گروه‌های مختلف دموگرافیک ارائه دهند.</li>
+          <li>پیش از استفاده، کاربرد سامانه و ریسک‌های احتمالی تبعیض را ارزیابی کنید.</li>
+          <li>بررسی انسانی، مستندسازی و کنترل کیفیت داده‌ها را متناسب با نقش و الزامات قانونی در نظر بگیرید.</li>
+          <li>اطلاع‌رسانی به متقاضیان و الزامات حریم خصوصی را با قوانین قابل‌اعمال و شیوهٔ واقعی استفاده از ابزار تطبیق دهید.</li>
         </ul>
       </section>
 
@@ -165,7 +165,7 @@ export const SEED_ARTICLES: ArticleData[] = [
       <section id="moments-that-matter">
         <h2>شناسایی «لحظات تعیین‌کننده» در سفر همکار</h2>
         <p>در طول مسیر کاری هر کارمند، رخدادهای کلیدی وجود دارند که تأثیری نامتناسب بر دلبستگی سازمانی بر جای می‌گذارند. نخستین روز ورود (Onboarding)، دریافت نخستین بازخورد رسمی، تجربه بحران شخصی یا خانوادگی، تغییر مدیر مستقیم و ترفیع شغلی از جمله این لحظات هستند.</p>
-        <p>شرکت‌هایی که فرایند آنبوردینگ شفاف، صمیمانه و مجهز به چک‌لیست‌های پیشرفته ایجاد می‌کنند، نرخ وفاداری کارکنان را در سال اول خدمت دو برابر افزایش می‌دهند.</p>
+        <p>آنبوردینگ ساختاریافته می‌تواند انتظارات شغلی را روشن‌تر کند، دسترسی به ابزارها و همکاران را آسان‌تر سازد و به تازه‌وارد کمک کند سریع‌تر با نقش خود آشنا شود. بااین‌حال، میزان اثر آن بر ماندگاری کارکنان به شرایط سازمان و کیفیت اجرا بستگی دارد؛ بدون منبع مشخص نباید ادعای «دو برابر شدن» مطرح شود.</p>
       </section>
 
       <section id="continuous-listening">
@@ -335,9 +335,7 @@ export const SEED_ARTICLES: ArticleData[] = [
       { id: "pitfalls-and-ethics", text: "دام‌های آماری و حفاظت از حریم شخصی کارکنان", level: 2 }
     ],
     references: [
-      { title: "People Analytics", source: "Chartered Institute of Personnel and Development (CIPD)", url: "https://www.cipd.org/en/knowledge/factsheets/analytics-factsheet/" },
-      { title: "People Analytics", source: "Chartered Institute of Personnel and Development (CIPD)", url: "https://www.cipd.org/en/knowledge/factsheets/analytics-factsheet/" },
-      { title: "People Analytics", source: "Chartered Institute of Personnel and Development (CIPD)", url: "https://www.cipd.org/en/knowledge/factsheets/analytics-factsheet/" }
+      { title: "People analytics factsheet", source: "Chartered Institute of Personnel and Development (CIPD)", url: "https://www.cipd.org/en/knowledge/factsheets/analytics-factsheet/" }
     ],
     content: `
       <section id="what-is-people-analytics">

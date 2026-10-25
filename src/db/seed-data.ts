@@ -757,11 +757,11 @@ export const TOPICS = [
   }
 ];
 
-export const SKILLS_RADAR_DATA = [
+// Trend labels are qualitative, not measured percentage forecasts. They summarize the World Economic Forum Future of Jobs Report 2023 (survey expectations for 2023–2027): https://www.weforum.org/publications/the-future-of-jobs-report-2023/in-full/4-skills-outlook/\nexport const SKILLS_RADAR_DATA = [
   {
     skill: "تفکر تحلیلی و نقادانه",
     category: "شناختی",
-    growth: "+۴۸٪",
+    growth: "اهمیت رو به افزایش؛ گزارش ۲۰۲۳ مجمع جهانی اقتصاد",
     importance: 96,
     trend: "صعودی سریع",
     desc: "توانایی سنجش شواهد، کشف خطاهای منطقی و ارزیابی عینی خروجی مدل‌های هوش مصنوعی."
@@ -769,7 +769,7 @@ export const SKILLS_RADAR_DATA = [
   {
     skill: "سواد هوش مصنوعی و پرامپت‌نویسی",
     category: "فناوری",
-    growth: "+۶۲٪",
+    growth: "مهارت نوظهور؛ بدون درصد رشد مشخص",
     importance: 92,
     trend: "صعودی سریع",
     desc: "مهارت تعامل موثر با ابزارهای مولد، تنظیم متغیرها و یکپارچه‌سازی آن‌ها در گردش کار روزانه."
@@ -777,7 +777,7 @@ export const SKILLS_RADAR_DATA = [
   {
     skill: "انعطاف‌پذیری و تاب‌آوری ذهنی",
     category: "فردی",
-    growth: "+۳۹٪",
+    growth: "اهمیت رو به افزایش؛ گزارش ۲۰۲۳ مجمع جهانی اقتصاد",
     importance: 89,
     trend: "صعودی پایدار",
     desc: "سازگاری با تغییرات مستمر فرآیندها و مدیریت اضطراب ناشی از تحولات مکرر فناورانه."
@@ -785,7 +785,7 @@ export const SKILLS_RADAR_DATA = [
   {
     skill: "همدلی و هوش هیجانی سازمانی",
     category: "بین‌فردی",
-    growth: "+۴۱٪",
+    growth: "اهمیت رو به افزایش؛ گزارش ۲۰۲۳ مجمع جهانی اقتصاد",
     importance: 88,
     trend: "صعودی پایدار",
     desc: "درک انگیزه‌ها و عواطف همکاران، تسهیل همکاری در تیم‌های چندرشته‌ای و مدیریت بحران‌های انسانی."
@@ -793,7 +793,7 @@ export const SKILLS_RADAR_DATA = [
   {
     skill: "کنجکاوی و اشتیاق یادگیری مداوم",
     category: "شناختی",
-    growth: "+۴۵٪",
+    growth: "اهمیت رو به افزایش؛ گزارش ۲۰۲۳ مجمع جهانی اقتصاد",
     importance: 91,
     trend: "صعودی سریع",
     desc: "پذیرش فعالانه نادانسته‌ها و بازآموزی خودجوش مهارت‌ها بدون نیاز به الزام اداری."
@@ -801,7 +801,7 @@ export const SKILLS_RADAR_DATA = [
   {
     skill: "ورود داده و پردازش متنی روتین",
     category: "عملیاتی",
-    growth: "-۵۵٪",
+    growth: "در برخی مشاغل در معرض کاهش اهمیت؛ گزارش ۲۰۲۳",
     importance: 30,
     trend: "افول شتابان",
     desc: "تایپ دستی، استخراج ساده متون و محاسبات روتین اداری که تماماً توسط ابزارهای خودکار انجام می‌شود."

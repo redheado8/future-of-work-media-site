@@ -286,18 +286,13 @@ export async function getPollData(pollKey: string = "workplace-transformation") 
     };
 
     const counts = new Map(rows.map((row) => [row.optionKey, row.votes]));
-    // These values were previously inserted as demo totals; subtract the known seed baseline
-    // so only votes submitted through the poll are presented as live results.
-    const demoBaseline: Record<string, number> = {
-      "ai-recruitment": 142,
-      "continuous-upskilling": 218,
-      "employee-wellbeing": 176,
-      "remote-hybrid-culture": 98,
-    };
+    // The database seed initializes poll options at zero. Report persisted vote
+    // counts directly; subtracting historical demo baselines hides real votes
+    // whenever the database does not contain those exact legacy totals.
     return Object.entries(labels).map(([optionKey, label]) => ({
       optionKey,
       label,
-      votes: Math.max(0, (counts.get(optionKey) ?? 0) - (demoBaseline[optionKey] ?? 0)),
+      votes: counts.get(optionKey) ?? 0,
     }));
   } catch (err) {
     console.error("Poll data error:", err);

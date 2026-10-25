@@ -142,7 +142,7 @@ export const SEED_ARTICLES: ArticleData[] = [
     ],
     references: [
       { title: "State of the Global Workplace", source: "Gallup", url: "https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" },
-      { title: "The Employee Experience Index", source: "IBM Smarter Workforce Institute", url: "https://www.ibm.com/thought-leadership/institute-business-value" },
+      { title: "IBM Institute for Business Value — research and insights", source: "IBM Institute for Business Value", url: "https://www.ibm.com/thought-leadership/institute-business-value" },
       { title: "The Future of Work", source: "MIT Sloan Management Review", url: "https://sloanreview.mit.edu/topic/future-of-work/" }
     ],
     content: `
@@ -756,12 +756,12 @@ export const TOPICS = [
   }
 ];
 
-// Trend labels are qualitative, not measured percentage forecasts. They summarize the World Economic Forum Future of Jobs Report 2023 (survey expectations for 2023–2027): https://www.weforum.org/publications/the-future-of-jobs-report-2023/in-full/4-skills-outlook/
+// Trend labels are qualitative, not measured percentage forecasts. They summarize the World Economic Forum Future of Jobs Report 2025 (employer expectations for 2025–2030): https://www.weforum.org/publications/the-future-of-jobs-report-2025/3-skills-outlook/
 export const SKILLS_RADAR_DATA = [
   {
     skill: "تفکر تحلیلی و نقادانه",
     category: "شناختی",
-    growth: "اهمیت رو به افزایش؛ گزارش ۲۰۲۳ مجمع جهانی اقتصاد",
+    growth: "اهمیت رو به افزایش؛ گزارش ۲۰۲۵ مجمع جهانی اقتصاد",
     importance: 96,
     trend: "صعودی سریع",
     desc: "توانایی سنجش شواهد، کشف خطاهای منطقی و ارزیابی عینی خروجی مدل‌های هوش مصنوعی."
@@ -777,7 +777,7 @@ export const SKILLS_RADAR_DATA = [
   {
     skill: "انعطاف‌پذیری و تاب‌آوری ذهنی",
     category: "فردی",
-    growth: "اهمیت رو به افزایش؛ گزارش ۲۰۲۳ مجمع جهانی اقتصاد",
+    growth: "اهمیت رو به افزایش؛ گزارش ۲۰۲۵ مجمع جهانی اقتصاد",
     importance: 89,
     trend: "صعودی پایدار",
     desc: "سازگاری با تغییرات مستمر فرآیندها و مدیریت اضطراب ناشی از تحولات مکرر فناورانه."
@@ -785,7 +785,7 @@ export const SKILLS_RADAR_DATA = [
   {
     skill: "همدلی و هوش هیجانی سازمانی",
     category: "بین‌فردی",
-    growth: "اهمیت رو به افزایش؛ گزارش ۲۰۲۳ مجمع جهانی اقتصاد",
+    growth: "اهمیت رو به افزایش؛ گزارش ۲۰۲۵ مجمع جهانی اقتصاد",
     importance: 88,
     trend: "صعودی پایدار",
     desc: "درک انگیزه‌ها و عواطف همکاران، تسهیل همکاری در تیم‌های چندرشته‌ای و مدیریت بحران‌های انسانی."
@@ -793,7 +793,7 @@ export const SKILLS_RADAR_DATA = [
   {
     skill: "کنجکاوی و اشتیاق یادگیری مداوم",
     category: "شناختی",
-    growth: "اهمیت رو به افزایش؛ گزارش ۲۰۲۳ مجمع جهانی اقتصاد",
+    growth: "اهمیت رو به افزایش؛ گزارش ۲۰۲۵ مجمع جهانی اقتصاد",
     importance: 91,
     trend: "صعودی سریع",
     desc: "پذیرش فعالانه نادانسته‌ها و بازآموزی خودجوش مهارت‌ها بدون نیاز به الزام اداری."
@@ -801,7 +801,7 @@ export const SKILLS_RADAR_DATA = [
   {
     skill: "ورود داده و پردازش متنی روتین",
     category: "عملیاتی",
-    growth: "در برخی مشاغل در معرض کاهش اهمیت؛ گزارش ۲۰۲۳",
+    growth: "در معرض کاهش اهمیت در برخی مشاغل؛ گزارش ۲۰۲۵",
     importance: 30,
     trend: "افول شتابان",
     desc: "تایپ دستی، استخراج ساده متون و محاسبات روتین اداری که تماماً توسط ابزارهای خودکار انجام می‌شود."

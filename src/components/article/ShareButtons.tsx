@@ -15,7 +15,7 @@ export function ShareButtons({ title, slug }: ShareButtonsProps) {
     if (typeof window !== "undefined") {
       return `${window.location.origin}/articles/${slug}`;
     }
-    return `https://worktomorrow.media/articles/${slug}`;
+    return `https://future-of-work-media-site.vercel.app/articles/${slug}`;
   };
 
   const copyToClipboard = () => {

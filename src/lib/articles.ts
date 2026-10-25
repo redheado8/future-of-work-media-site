@@ -98,6 +98,20 @@ function parseArticleRow(row: typeof articles.$inferSelect): ParsedArticle {
   };
 }
 
+function getSeedArticlesAsParsed(): ParsedArticle[] {
+  return SEED_ARTICLES.map((item, index) => ({
+    ...item,
+    id: index + 1,
+    tags: item.tags,
+    tableOfContents: item.tableOfContents,
+    keyTakeaways: item.keyTakeaways,
+    references: item.references,
+    viewsCount: 140,
+    likesCount: 22,
+    createdAt: null,
+  }));
+}
+
 export async function getAllArticles(options?: {
   category?: string;
   search?: string;
@@ -133,8 +147,8 @@ export async function getAllArticles(options?: {
 
     return parsed;
   } catch (error) {
-    console.error("Error fetching articles:", error);
-    return [];
+    console.error("Error fetching articles; using bundled seed content:", error);
+    return getSeedArticlesAsParsed();
   }
 }
 
@@ -155,8 +169,8 @@ export async function getFeaturedArticle(): Promise<ParsedArticle | null> {
     const firstRow = await db.select().from(articles).limit(1);
     return firstRow.length > 0 ? parseArticleRow(firstRow[0]) : null;
   } catch (error) {
-    console.error("Error fetching featured article:", error);
-    return null;
+    console.error("Error fetching featured article; using bundled seed content:", error);
+    return getSeedArticlesAsParsed().find((article) => article.isFeatured) ?? getSeedArticlesAsParsed()[0] ?? null;
   }
 }
 
@@ -173,8 +187,8 @@ export async function getArticleBySlug(slug: string): Promise<ParsedArticle | nu
 
     return parseArticleRow(rows[0]);
   } catch (error) {
-    console.error("Error fetching article by slug:", error);
-    return null;
+    console.error("Error fetching article by slug; using bundled seed content:", error);
+    return getSeedArticlesAsParsed().find((article) => article.slug === slug) ?? null;
   }
 }
 

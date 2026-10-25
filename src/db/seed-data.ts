@@ -29,7 +29,7 @@ export const SEED_ARTICLES: ArticleData[] = [
     readTime: 9,
     authorName: "تیم تحریریه فردای کار",
     authorRole: "پژوهشگر تحول دیجیتال و سرمایه انسانی",
-    coverImage: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200",
+    coverImage: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600",
     isFeatured: true,
     publishedAt: "۱۴ اردیبهشت ۱۴۰۳",
     tags: ["هوش مصنوعی", "جذب استعداد", "استخدام مدرن", "اخلاق الگوریتمی", "منابع انسانی هوشمند"],

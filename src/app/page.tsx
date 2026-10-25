@@ -80,33 +80,44 @@ export default async function HomePage() {
                 </a>
               </div>
 
-              {/* Quick Verified Highlights */}
+              {/* Verified figures from the World Economic Forum's 2023 report */}
               <div className="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 text-xs">
                 <div>
-                  <span className="text-xl sm:text-2xl font-black font-mono text-teal-400 block">
+                  <span className="text-xl sm:text-2xl font-black text-teal-400 block">
                     ۴۴٪
                   </span>
                   <span className="text-slate-400 leading-snug block">
-                    تحول مهارت‌های شغلی تا ۲۰۲۸
+                    مهارت‌های کارکنان که تا ۲۰۲۷ نیازمند تغییر برآورد شده‌اند
                   </span>
                 </div>
                 <div>
-                  <span className="text-xl sm:text-2xl font-black font-mono text-cyan-400 block">
-                    ۸۵M
+                  <span className="text-xl sm:text-2xl font-black text-cyan-400 block">
+                    ۸۳ میلیون
                   </span>
                   <span className="text-slate-400 leading-snug block">
-                    شغل در مسیر بازتعریف با AI
+                    شغلِ پیش‌بینی‌شده برای حذف تا ۲۰۲۷
                   </span>
                 </div>
                 <div>
-                  <span className="text-xl sm:text-2xl font-black font-mono text-emerald-400 block">
-                    ۷۲٪
+                  <span className="text-xl sm:text-2xl font-black text-emerald-400 block">
+                    ۶۹ میلیون
                   </span>
                   <span className="text-slate-400 leading-snug block">
-                    اولویت تجربه کارکنان (EX)
+                    شغلِ پیش‌بینی‌شده برای ایجاد تا ۲۰۲۷
                   </span>
                 </div>
               </div>
+              <p className="mt-3 text-[11px] text-slate-500">
+                برآوردهای گزارش «آیندهٔ مشاغل ۲۰۲۳» مجمع جهانی اقتصاد؛ این اعداد پیش‌بینی آن زمان‌اند، نه آمار قطعی امروز.{" "}
+                <a
+                  href="https://www.weforum.org/publications/the-future-of-jobs-report-2023/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-teal-300 underline underline-offset-2 hover:text-teal-200"
+                >
+                  مشاهدهٔ منبع
+                </a>
+              </p>
             </div>
 
             {/* Visual Graphic */}
@@ -206,7 +217,7 @@ export default async function HomePage() {
                         <IconComp className="w-6 h-6" />
                       </div>
                       <span className="text-[11px] font-mono text-slate-400 group-hover:text-teal-700 transition">
-                        ۰{idx + 1}
+                        {(idx + 1).toLocaleString("fa-IR", { minimumIntegerDigits: 2, useGrouping: false })}
                       </span>
                     </div>
 

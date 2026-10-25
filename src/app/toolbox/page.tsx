@@ -64,7 +64,7 @@ export default function ToolboxPage() {
             صفحه اصلی
           </Link>
           <span>/</span>
-          <span className="text-teal-800 font-bold">جعبه‌ابزار دنیای کار</span>
+          <span className="text-teal-800 font-bold">جعبه‌ابزار فردای کار</span>
         </div>
 
         {/* Hero Header */}
@@ -79,7 +79,7 @@ export default function ToolboxPage() {
             </div>
 
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4">
-              جعبه‌ابزار دنیای کار:
+              جعبه‌ابزار فردای کار:
               <br />
               <span className="bg-gradient-to-r from-teal-300 via-cyan-200 to-white bg-clip-text text-transparent">
                 پرامپت‌ها و متدولوژی‌های کاربردی برای مدیران و متخصصان

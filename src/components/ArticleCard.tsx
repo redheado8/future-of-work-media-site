@@ -41,7 +41,7 @@ export function ArticleCard({ article, featured = false }: ArticleCardProps) {
         <Link href={`/articles/${article.slug}`} className="block w-full h-full">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={article.coverImage}
+            src={`/api/image?url=${encodeURIComponent(article.coverImage)}`}
             alt={article.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
@@ -49,7 +49,7 @@ export function ArticleCard({ article, featured = false }: ArticleCardProps) {
               const image = event.currentTarget;
               if (!image.dataset.fallbackApplied) {
                 image.dataset.fallbackApplied = "true";
-                image.src = "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600";
+                image.src = `/api/image?url=${encodeURIComponent("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600")}`;
               }
             }}
           />

@@ -29,7 +29,7 @@ export const SEED_ARTICLES: ArticleData[] = [
     readTime: 9,
     authorName: "محتوای نمونه",
     authorRole: "برای نمایش قابلیت‌های سایت",
-    coverImage: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600",
+    coverImage: "https://images.pexels.com/photos/5668863/pexels-photo-5668863.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600",
     isFeatured: true,
     publishedAt: "نمونهٔ نمایشی",
     tags: ["هوش مصنوعی", "جذب استعداد", "استخدام مدرن", "اخلاق الگوریتمی", "منابع انسانی هوشمند"],

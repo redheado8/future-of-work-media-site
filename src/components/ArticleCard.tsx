@@ -41,7 +41,7 @@ export function ArticleCard({ article, featured = false }: ArticleCardProps) {
         <Link href={`/articles/${article.slug}`} className="block w-full h-full">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`/api/image?url=${encodeURIComponent(article.coverImage)}`}
+            src={`/api/image?url=${encodeURIComponent(article.slug === "ai-transforming-recruitment" ? "https://images.pexels.com/photos/5668863/pexels-photo-5668863.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600" : article.coverImage)}`} 
             alt={article.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
@@ -49,7 +49,7 @@ export function ArticleCard({ article, featured = false }: ArticleCardProps) {
               const image = event.currentTarget;
               if (!image.dataset.fallbackApplied) {
                 image.dataset.fallbackApplied = "true";
-                image.src = `/api/image?url=${encodeURIComponent("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600")}`;
+                image.src = `/api/image?url=${encodeURIComponent(article.slug === "ai-transforming-recruitment" ? "https://images.pexels.com/photos/5668863/pexels-photo-5668863.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600" : "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600")}`;
               }
             }}
           />
@@ -131,7 +131,7 @@ export function ArticleCard({ article, featured = false }: ArticleCardProps) {
               <User className="w-3.5 h-3.5" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xs font-semibold text-slate-800">محتوای نمونه</span>
+              <span className="text-xs font-semibold text-slate-800">مقالهٔ تحلیلی</span>
               <span className="text-[10px] text-slate-400">تحریریهٔ فردای کار</span>
             </div>
           </div>

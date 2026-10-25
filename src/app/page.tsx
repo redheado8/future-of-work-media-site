@@ -46,7 +46,7 @@ export default async function HomePage() {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-300 text-xs font-semibold">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>رسانه تخصصی آینده کار و منابع انسانی هوشمند</span>
+                <span>رسانهٔ تخصصی «فردای کار»؛ هوش مصنوعی، منابع انسانی و آیندهٔ کار</span>
               </div>
 
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.25]">
@@ -95,7 +95,7 @@ export default async function HomePage() {
                     ۸۳ میلیون
                   </span>
                   <span className="text-slate-400 leading-snug block">
-                    شغلِ پیش‌بینی‌شده برای حذف تا ۲۰۲۷
+                    شغلِ در معرض جابه‌جایی تا ۲۰۲۷، طبق برآورد گزارش ۲۰۲۳
                   </span>
                 </div>
                 <div>

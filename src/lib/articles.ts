@@ -3,8 +3,12 @@ import { articles, newsletterSubscribers, pollVotes, articleFeedback } from "@/d
 import { eq, desc, sql, and, ne } from "drizzle-orm";
 import { SEED_ARTICLES } from "@/db/seed-data";
 
-// Fallback auto-seed in case database is refreshed
+// Seed sync runs once per server runtime to avoid repeating writes on every request.
+let seedSyncPromise: Promise<void> | null = null;
+
 export async function ensureArticlesSeeded() {
+  if (seedSyncPromise) return seedSyncPromise;
+  seedSyncPromise = (async () => {
   try {
     // Keep seed-managed article content in sync by slug, while preserving user engagement counters.
     // This updates article metadata/content/references on deploy without resetting views or likes.
@@ -56,7 +60,10 @@ export async function ensureArticlesSeeded() {
     }
   } catch (err) {
     console.error("Article seed sync error:", err);
+    seedSyncPromise = null;
   }
+  })();
+  return seedSyncPromise;
 }
 
 export interface ParsedArticle {

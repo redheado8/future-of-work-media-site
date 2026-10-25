@@ -152,6 +152,13 @@ export function ArticleView({ article, relatedArticles }: ArticleViewProps) {
                 src={`/api/image?url=${encodeURIComponent(article.coverImage)}`}
                 alt={article.title}
                 className="w-full h-full object-cover"
+                onError={(event) => {
+                  const image = event.currentTarget;
+                  if (!image.dataset.fallbackApplied) {
+                    image.dataset.fallbackApplied = "true";
+                    image.src = "/api/image?url=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F3184465%2Fpexels-photo-3184465.jpeg%3Fauto%3Dcompress%26cs%3Dtinysrgb%26fit%3Dcrop%26w%3D1600";
+                  }
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
             </div>

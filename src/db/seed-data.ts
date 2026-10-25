@@ -50,10 +50,10 @@ export const SEED_ARTICLES: ArticleData[] = [
       { id: "conclusion", text: "جمع‌بندی: نقشه راه استخدام مسئولانه", level: 2 }
     ],
     references: [
-      { title: "The State of AI in HR 2024 Report", source: "McKinsey & Company" },
-      { title: "Algorithmic Bias in Talent Acquisition: Mitigation Strategies", source: "Harvard Business Review" },
-      { title: "EU Artificial Intelligence Act - High-Risk Employment Systems", source: "European Parliament & Council" },
-      { title: "Gartner Hype Cycle for Human Capital Management", source: "Gartner Research" }
+      { title: "Regulation (EU) 2024/1689 — Artificial Intelligence Act", source: "European Parliament and Council", url: "https://eur-lex.europa.eu/eli/reg/2024/1689/oj" },
+      { title: "Assessing Adverse Impact in Software, Algorithms, and Artificial Intelligence Used in Employment Selection Procedures", source: "U.S. Equal Employment Opportunity Commission", url: "https://www.eeoc.gov/laws/guidance/select-issues-assessing-adverse-impact-software-algorithms-and-artificial-intelligence" },
+      { title: "Employers’ Use of AI Tools Can Result in Discrimination", source: "U.S. Equal Employment Opportunity Commission", url: "https://www.eeoc.gov/newsroom/us-eeoc-and-us-department-justice-warn-against-disability-discrimination" },
+      { title: "Business leaders risk sleepwalking towards AI misuse", source: "Reuters", url: "https://www.reuters.com/sustainability/society-equity/comment-business-leaders-risk-sleepwalking-towards-ai-misuse-2024-11-19/" }
     ],
     content: `
       <section id="introduction">
@@ -80,7 +80,7 @@ export const SEED_ARTICLES: ArticleData[] = [
 
       <section id="interview-analytics">
         <h2>تحلیل مکالمات و مصاحبه‌های اولیه با هوش مصنوعی</h2>
-        <p>ابزارهای هوش مصنوعی اکنون قادرند در مراحل مقدماتی، پاسخ‌های متنی یا صوتی کارجویان به سناریوهای مهارتی را ساختاربندی کنند. برای نمونه، بررسی میزان انطباق پاسخ کارجو با ساختار STAR (موقعیت، وظیفه، اقدام، نتیجه) و خلاصه‌سازی نکات کلیدی مصاحبه، زمان آماده‌سازی کارشناس جذب را تا ۴۰ درصد کاهش می‌دهد.</p>
+        <p>ابزارهای هوش مصنوعی می‌توانند در مراحل مقدماتی، پاسخ‌های متنی یا صوتی کارجویان به پرسش‌های مهارتی را خلاصه و ساختاربندی کنند. برای نمونه، می‌توان از آن‌ها خواست پاسخ را بر اساس چارچوب STAR (موقعیت، وظیفه، اقدام، نتیجه) دسته‌بندی کنند تا بررسی اولیه برای کارشناس جذب آسان‌تر شود. میزان صرفه‌جویی در زمان به ابزار، نوع شغل و شیوهٔ استفاده بستگی دارد؛ در نبود پژوهش مشخص و قابل‌بررسی، نمی‌توان درصد ثابتی برای آن اعلام کرد.</p>
       </section>
 
       <section id="bias-risks">
@@ -628,7 +628,7 @@ export const TOOLBOX_GUIDES = [
 ۳. دو اقدام فوری که باید در ۹۰ روز آینده انجام دهیم.
 متن گزارش: [متن را در اینجا قرار دهید]`,
     sampleOutput: `بریف اجرایی نمونه:
-- یافته ۱: ۶۰ درصد مهارت‌های برنامه‌نویسی تا ۲۰۲۶ نیازمند هم‌افزایی با ابزارهای خودکار است (کاهش ۴۰ درصدی زمان رفع باگ).
+- یافته ۱: [یک یافتهٔ عددی که مستقیماً از گزارش معتبر استخراج و با ذکر صفحه/جدول بررسی شده باشد.]
 - اقدام ۹۰ روزه: راه‌اندازی کارگاه مهندسی پرامپت برای ۴۰ نفر از مهندسان ارشد و سنجش تغییر سرعت دپلوی.`,
     limitations: "همواره اعداد و نمودارهای استخراج‌شده را با متن اصلی سند مطابقت دهید؛ مدل‌های زبانی گاهی ارقام مشابه را جابجا می‌کنند."
   },

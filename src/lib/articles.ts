@@ -28,8 +28,8 @@ export async function ensureArticlesSeeded() {
           keyTakeaways: JSON.stringify(item.keyTakeaways),
           tableOfContents: JSON.stringify(item.tableOfContents),
           references: JSON.stringify(item.references),
-          viewsCount: 140,
-          likesCount: 22,
+          viewsCount: 0,
+          likesCount: 0,
         });
       }
     }
@@ -106,8 +106,8 @@ function getSeedArticlesAsParsed(): ParsedArticle[] {
     tableOfContents: item.tableOfContents,
     keyTakeaways: item.keyTakeaways,
     references: item.references,
-    viewsCount: 140,
-    likesCount: 22,
+    viewsCount: 0,
+    likesCount: 0,
     createdAt: null,
   }));
 }
@@ -286,10 +286,18 @@ export async function getPollData(pollKey: string = "workplace-transformation") 
     };
 
     const counts = new Map(rows.map((row) => [row.optionKey, row.votes]));
+    // These values were previously inserted as demo totals; subtract the known seed baseline
+    // so only votes submitted through the poll are presented as live results.
+    const demoBaseline: Record<string, number> = {
+      "ai-recruitment": 142,
+      "continuous-upskilling": 218,
+      "employee-wellbeing": 176,
+      "remote-hybrid-culture": 98,
+    };
     return Object.entries(labels).map(([optionKey, label]) => ({
       optionKey,
       label,
-      votes: counts.get(optionKey) ?? 0,
+      votes: Math.max(0, (counts.get(optionKey) ?? 0) - (demoBaseline[optionKey] ?? 0)),
     }));
   } catch (err) {
     console.error("Poll data error:", err);

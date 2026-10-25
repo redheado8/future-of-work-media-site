@@ -92,7 +92,7 @@ export function ArticleView({ article, relatedArticles }: ArticleViewProps) {
               <span className="text-slate-300">•</span>
               <span className="text-xs text-slate-500 flex items-center gap-1">
                 <Calendar className="w-3.5 h-3.5 text-slate-400" />
-                {article.publishedAt}
+                محتوای نمونه
               </span>
             </div>
 
@@ -114,8 +114,8 @@ export function ArticleView({ article, relatedArticles }: ArticleViewProps) {
                   <User className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900">{article.authorName}</h4>
-                  <p className="text-xs text-slate-500">{article.authorRole}</p>
+                  <h4 className="text-sm font-bold text-slate-900">محتوای نمونه</h4>
+                  <p className="text-xs text-slate-500">برای نمایش قابلیت‌های سایت</p>
                 </div>
               </div>
 

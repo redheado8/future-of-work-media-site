@@ -2,8 +2,8 @@ import pg from "pg";
 
 const url = process.env.DATABASE_URL;
 if (!url) {
-  console.error("DATABASE_URL is missing");
-  process.exit(1);
+  console.warn("DATABASE_URL is missing; skipping database initialization during build.");
+  process.exit(0);
 }
 
 const pool = new pg.Pool({ connectionString: url });

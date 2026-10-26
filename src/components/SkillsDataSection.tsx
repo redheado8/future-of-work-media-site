@@ -89,8 +89,8 @@ export function SkillsDataSection() {
     }
   };
 
-  const growingSkills = SKILLS_RADAR_DATA.filter((s) => s.trend.includes("صعودی"));
-  const decliningSkills = SKILLS_RADAR_DATA.filter((s) => s.trend.includes("افول"));
+  const growingSkills = SKILLS_RADAR_DATA.filter((s) => s.trend === "رو به افزایش");
+  const decliningSkills = SKILLS_RADAR_DATA.filter((s) => s.trend === "کاهش مورد انتظار");
 
   return (
     <section className="py-14 sm:py-20 bg-slate-900 text-white rounded-3xl my-10 overflow-hidden relative border border-slate-800">
@@ -106,11 +106,10 @@ export function SkillsDataSection() {
             <span>رصد داده‌محور بازار کار و شایستگی‌ها</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight mb-4 leading-tight">
-            کدام مهارت‌ها تا سال ۲۰۳۰ اهمیت بنیادین می‌یابند؟
+            مهارت‌های موردنیاز آینده؛ بر پایهٔ گزارش ۲۰۲۵
           </h2>
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            بررسی الگوهای تحول شایستگی‌های انسانی در تقابل با هوش مصنوعی و ابزارهای خودکار،
-            بر مبنای یافته‌های گزارش آینده مشاغل (Future of Jobs).
+            مروری بر انتظارات کارفرمایان دربارهٔ مهارت‌های کاری در فاصلهٔ ۲۰۲۵ تا ۲۰۳۰؛ بر پایهٔ گزارش «آیندهٔ مشاغل ۲۰۲۵» مجمع جهانی اقتصاد. نوارها رتبه‌بندی تصویری تحریریه‌اند، نه درصد رشد مهارت‌ها.
           </p>
         </div>
 
@@ -162,10 +161,10 @@ export function SkillsDataSection() {
                 <div className="flex items-center justify-between border-b border-slate-700 pb-4">
                   <h3 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
                     <TrendingUp className="w-5 h-5 text-teal-400" />
-                    <span>شایستگی‌های غیرقابل جایگزین با بالاترین تقاضا</span>
+                    <span>مهارت‌های مورد انتظارِ رو به رشد</span>
                   </h3>
                   <span className="text-xs text-teal-300 bg-teal-500/10 px-2 py-1 rounded">
-                    رشد سالانه
+                    روند مورد انتظار
                   </span>
                 </div>
 
@@ -271,8 +270,8 @@ export function SkillsDataSection() {
             )}
 
             <div className="mt-6 pt-4 border-t border-slate-700/60 flex items-center justify-between text-[11px] text-slate-400">
-              <span>منبع: گزارش آیندهٔ مشاغل • مجمع جهانی اقتصاد</span>
-              <span className="text-slate-500">تحلیل ترکیبی ۲۰۲۴-۲۰۲۶</span>
+              <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/3-skills-outlook" target="_blank" rel="noreferrer" className="text-teal-300 underline underline-offset-2 hover:text-teal-200">منبع: گزارش آیندهٔ مشاغل ۲۰۲۵ • مجمع جهانی اقتصاد ↗</a>
+              <span className="text-slate-500">نوارها رتبه‌بندی تحریریه‌اند</span>
             </div>
           </div>
 

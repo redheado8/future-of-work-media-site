@@ -489,7 +489,7 @@ export const SEED_ARTICLES: ArticleData[] = [
     tags: ["رهبری سازمانی", "چابکی", "مدیریت ابهام", "تحول فرهنگی", "تاب‌آوری"],
     keyTakeaways: [
       "رهبر مدرن پاسخ‌دهنده به همه پرسش‌ها نیست، بلکه چارچوب‌دهنده به کاوش‌های جمعی تیم است.",
-      "تفویض اختیار به خطوط مقدم تصمیم‌گیری، سرعت واکنش سازمان را چند برابر می‌کند.",
+      "تفویض اختیار به خطوط مقدم تصمیم‌گیری می‌تواند سرعت واکنش را افزایش دهد؛ اثر آن به میزان اختیار واقعی تیم‌ها و فرایندهای سازمان بستگی دارد.",
       "شفافیت رادیکال و اشتراک‌گذاری داده‌ها مانع شکل‌گیری جزیره‌های اطلاعاتی در سازمان می‌شود.",
       "فرهنگ استارتاپی در قلب سازمان‌های سنتی تنها با حمایت همه‌جانبه هیئت مدیره تداوم می‌یابد."
     ],
@@ -501,7 +501,8 @@ export const SEED_ARTICLES: ArticleData[] = [
     ],
     references: [
       { title: "Psychological Safety and Learning Behavior in Work Teams", source: "Administrative Science Quarterly", url: "https://doi.org/10.2307/2666999" },
-      { title: "The Future of Work", source: "McKinsey & Company", url: "https://www.mckinsey.com/featured-insights/future-of-work" }
+      { title: "The Future of Work", source: "McKinsey & Company", url: "https://www.mckinsey.com/featured-insights/future-of-work" },
+      { title: "Jeff Bezos’ 2016 Letter to Shareholders — High-Velocity Decision Making", source: "Amazon", url: "https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders" }
     ],
     content: `
       <section id="leadership-shift">

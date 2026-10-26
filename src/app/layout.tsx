@@ -32,12 +32,14 @@ export const metadata: Metadata = {
     locale: "fa_IR",
     type: "website",
     url: "/",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "فردای کار؛ آیندهٔ کار، منابع انسانی و هوش مصنوعی" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "فردای کار | ایده‌های تازه برای دنیای در حال تغییر کار",
     description:
       "پروژه‌ای شخصی درباره آیندهٔ کار، منابع انسانی و هوش مصنوعی؛ با محتوای فارسی و ابزارهای کاربردی.",
+    images: ["/opengraph-image"],
   },
 };
 

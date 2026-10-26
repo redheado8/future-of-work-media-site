@@ -6,12 +6,13 @@ import { BookmarkProvider } from "@/components/BookmarkContext";
 import { getAllArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://future-of-work-media-site.vercel.app"),
   title: {
     default: "فردای کار | ایده‌های تازه برای دنیای در حال تغییر کار",
     template: "%s | فردای کار",
   },
   description:
-    "رسانه تخصصی آینده کار، مدیریت سرمایه انسانی، هوش مصنوعی، یادگیری سازمانی و تحول دیجیتال سازمان‌ها.",
+    "پروژه‌ای شخصی درباره آیندهٔ کار، منابع انسانی و هوش مصنوعی؛ با محتوای فارسی و ابزارهای کاربردی.",
   keywords: [
     "آینده کار",
     "منابع انسانی هوشمند",
@@ -25,10 +26,18 @@ export const metadata: Metadata = {
   authors: [{ name: "فردای کار" }],
   openGraph: {
     title: "فردای کار | ایده‌های تازه برای دنیای در حال تغییر کار",
-    description: "رسانه مستقل تخصصی درباره فناوری‌های نوین در محیط کار و مدیریت سرمایه انسانی",
+    description:
+      "پروژه‌ای شخصی درباره آیندهٔ کار، منابع انسانی و هوش مصنوعی؛ با محتوای فارسی و ابزارهای کاربردی.",
     siteName: "فردای کار",
     locale: "fa_IR",
     type: "website",
+    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "فردای کار | ایده‌های تازه برای دنیای در حال تغییر کار",
+    description:
+      "پروژه‌ای شخصی درباره آیندهٔ کار، منابع انسانی و هوش مصنوعی؛ با محتوای فارسی و ابزارهای کاربردی.",
   },
 };
 

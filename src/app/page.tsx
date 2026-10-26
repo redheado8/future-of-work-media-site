@@ -80,43 +80,24 @@ export default async function HomePage() {
                 </a>
               </div>
 
-              {/* Verified figures from the World Economic Forum's 2023 report */}
+              {/* Verified figures from the World Economic Forum's 2025 report */}
               <div className="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 text-xs">
                 <div>
-                  <span className="text-xl sm:text-2xl font-black text-teal-400 block">
-                    ۴۴٪
-                  </span>
-                  <span className="text-slate-400 leading-snug block">
-                    مهارت‌های کارکنان که تا ۲۰۲۷ نیازمند تغییر برآورد شده‌اند
-                  </span>
+                  <span className="text-xl sm:text-2xl font-black text-teal-400 block">۳۹٪</span>
+                  <span className="text-slate-400 leading-snug block">از مهارت‌های اصلی کارکنان که انتظار می‌رود تا ۲۰۳۰ تغییر کند</span>
                 </div>
                 <div>
-                  <span className="text-xl sm:text-2xl font-black text-cyan-400 block">
-                    ۸۳ میلیون
-                  </span>
-                  <span className="text-slate-400 leading-snug block">
-                    شغلِ در معرض جابه‌جایی تا ۲۰۲۷، طبق برآورد گزارش ۲۰۲۳
-                  </span>
+                  <span className="text-xl sm:text-2xl font-black text-cyan-400 block">۵۰٪</span>
+                  <span className="text-slate-400 leading-snug block">از نیروی کارِ گزارش‌شده که آموزش شغلی دریافت کرده است</span>
                 </div>
                 <div>
-                  <span className="text-xl sm:text-2xl font-black text-emerald-400 block">
-                    ۶۹ میلیون
-                  </span>
-                  <span className="text-slate-400 leading-snug block">
-                    شغلِ پیش‌بینی‌شده برای ایجاد تا ۲۰۲۷
-                  </span>
+                  <span className="text-xl sm:text-2xl font-black text-emerald-400 block">۷۰٪</span>
+                  <span className="text-slate-400 leading-snug block">از کارفرمایان که تفکر تحلیلی را مهارت اصلی می‌دانند</span>
                 </div>
               </div>
               <p className="mt-3 text-[11px] text-slate-500">
-                برآوردهای گزارش «آیندهٔ مشاغل ۲۰۲۳» مجمع جهانی اقتصاد؛ این اعداد پیش‌بینی آن زمان‌اند، نه آمار قطعی امروز.{" "}
-                <a
-                  href="https://www.weforum.org/publications/the-future-of-jobs-report-2023/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-teal-300 underline underline-offset-2 hover:text-teal-200"
-                >
-                  مشاهدهٔ منبع
-                </a>
+                برآوردهای پیمایش کارفرمایان در گزارش «آیندهٔ مشاغل ۲۰۲۵» مجمع جهانی اقتصاد؛ این اعداد پیش‌بینی‌ها و پاسخ‌های گزارش‌اند، نه تضمین وضعیت همهٔ کشورها و مشاغل.{" "}
+                <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/3-skills-outlook" target="_blank" rel="noreferrer" className="text-teal-300 underline underline-offset-2 hover:text-teal-200">مشاهدهٔ منبع</a>
               </p>
             </div>
 
